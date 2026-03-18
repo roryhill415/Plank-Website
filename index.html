@@ -41,9 +41,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 48px;
-    height: 72px;
-    background: rgba(17,17,17,0.92);
-    backdrop-filter: blur(12px);
+    height: 88px;
+    background: #000000;
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
 
@@ -512,9 +511,9 @@
   }
 
   .vp-body {
-    font-size: 14px;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.55);
+    font-size: 16px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.65);
   }
 
   /* comparison table */
@@ -690,6 +689,22 @@
     padding: 40px;
     border-top: 3px solid var(--orange);
     position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .proof-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(17,17,17,0.72);
+    z-index: 0;
+  }
+
+  .proof-card > * {
+    position: relative;
+    z-index: 1;
   }
 
   .proof-card-label {
@@ -1220,7 +1235,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="plank-logo-wordmark.svg" alt="Plank Structural Systems" style="height: 48px; width: auto; display: block;">
+    <img src="plank-logo-wordmark.svg" alt="Plank Structural Systems" style="height: 68px; width: auto; display: block;">
   </a>
   <ul class="nav-links">
     <li><a href="#product">The System</a></li>
@@ -1289,7 +1304,7 @@
     </div>
 
     <div class="layers-diagram">
-      <img src="plank-exploded.png" alt="Plank foundation system — exploded layer view" style="width: 100%; display: block; border-radius: 2px;">
+      <img src="plank-exploded.png" alt="Plank foundation system — exploded layer view" style="width: 75%; display: block; border-radius: 2px; margin: 0 auto;">
     </div>
   </div>
 
@@ -1516,8 +1531,7 @@
   <h2 class="section-title">Third-party validated.<br><em>Patent protected.</em></h2>
 
   <div class="proof-grid">
-    <div class="proof-card">
-      <img src="plank-peerlab.png" alt="UC Berkeley PEER Lab compression testing" style="width: calc(100% + 80px); margin: -40px -40px 28px -40px; display: block; height: 220px; object-fit: cover; object-position: center top;">
+    <div class="proof-card" style="background-image: url('plank-peerlab.png');">
       <div class="proof-card-label">Independent Testing · 2022</div>
       <div class="proof-card-title">UC Berkeley PEER Lab</div>
       <div class="proof-card-body">
@@ -1543,8 +1557,7 @@
       </div>
     </div>
 
-    <div class="proof-card">
-      <img src="plank-demohut.png" alt="The Demo Hut at UC Davis" style="width: calc(100% + 80px); margin: -40px -40px 28px -40px; display: block; height: 240px; object-fit: cover; object-position: center top;">
+    <div class="proof-card" style="background-image: url('plank-demohut.png'); background-position: center top;">
       <div class="proof-card-label">Pilot Project · May 2024</div>
       <div class="proof-card-title">The Demo Hut at UC Davis</div>
       <div class="proof-card-body">

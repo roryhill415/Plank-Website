@@ -219,23 +219,24 @@
   .hero-right img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0.55;
-    filter: contrast(1.1);
+    object-fit: contain;
+    object-position: center;
+    opacity: 0.9;
+    padding: 40px;
   }
 
   .hero-right::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, var(--dark) 0%, transparent 40%);
+    background: linear-gradient(to right, var(--dark) 0%, transparent 30%);
   }
 
   .hero-right::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, var(--dark) 0%, transparent 50%);
+    background: linear-gradient(to top, var(--dark) 0%, transparent 40%);
     z-index: 1;
   }
 
@@ -407,7 +408,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     margin-top: 60px;
-    align-items: center;
+    align-items: stretch;
   }
 
   .product-copy {
@@ -425,8 +426,8 @@
 
   /* layers diagram */
   .layers-diagram {
-    position: relative;
-    padding: 40px 0;
+    background: url('plank-exploded.png') center top / contain no-repeat;
+    min-height: 560px;
   }
 
   .layer-row {
@@ -860,7 +861,7 @@
 
   /* ── STORY ── */
   #story {
-    background: var(--dark) url('plank-detail.png') center center / cover no-repeat;
+    background: var(--dark) url('plank-install.png') center center / cover no-repeat;
     position: relative;
     padding: 100px 80px;
   }
@@ -1034,24 +1035,18 @@
 
   /* ── CONTACT ── */
   #contact {
-    background: var(--charcoal);
+    background: var(--charcoal) url('plank-house.png') right bottom / 45% no-repeat;
     padding: 100px 80px;
     position: relative;
     overflow: hidden;
   }
 
   #contact::before {
-    content: 'PLANK';
+    content: '';
     position: absolute;
-    bottom: -40px;
-    right: -20px;
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 220px;
-    color: rgba(255,255,255,0.03);
-    line-height: 1;
+    inset: 0;
+    background: rgba(28,28,28,0.75);
     pointer-events: none;
-    letter-spacing: -0.04em;
   }
 
   .contact-grid {
@@ -1263,7 +1258,7 @@
     </div>
   </div>
   <div class="hero-right">
-    <img src="plank-install.png" alt="Plank foundation installation">
+    <img src="plank-house.png" alt="House built on Plank foundation" style="object-fit: contain; object-position: center;">
   </div>
 
   <div class="stat-strip fade-up fade-up-5">
@@ -1300,7 +1295,7 @@
     </div>
 
     <div class="layers-diagram">
-      <img src="plank-exploded.png" alt="Plank foundation system — exploded layer view" style="width: 100%; max-height: 500px; object-fit: contain; display: block;">
+    </div>
     </div>
   </div>
 

@@ -577,7 +577,7 @@
 
   /* timeline */
   #timeline-section {
-    background: var(--dark);
+    background: var(--light-gray);
     padding: 100px 80px;
   }
 
@@ -592,7 +592,7 @@
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.3);
+    color: rgba(0,0,0,0.35);
     padding: 12px 0 8px;
     display: flex;
     align-items: center;
@@ -609,19 +609,19 @@
   .tg-header {
     font-size: 11px;
     text-align: center;
-    color: rgba(255,255,255,0.25);
+    color: rgba(0,0,0,0.25);
     padding: 8px 0;
   }
 
   .tg-cell {
     height: 40px;
-    background: rgba(255,255,255,0.04);
+    background: rgba(0,0,0,0.06);
     border-radius: 2px;
   }
 
   .tg-row-label {
     font-size: 11px;
-    color: rgba(255,255,255,0.35);
+    color: rgba(0,0,0,0.4);
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -629,7 +629,7 @@
   }
 
   .tg-filled {
-    background: rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.15);
     border-radius: 2px;
   }
 
@@ -654,7 +654,7 @@
   .timeline-note {
     margin-top: 20px;
     font-size: 14px;
-    color: rgba(255,255,255,0.45);
+    color: rgba(0,0,0,0.45);
     display: flex;
     align-items: center;
     gap: 12px;
@@ -844,8 +844,22 @@
 
   /* ── STORY ── */
   #story {
-    background: var(--dark);
+    background: var(--dark) url('plank-detail.png') center center / cover no-repeat;
+    position: relative;
     padding: 100px 80px;
+  }
+
+  #story::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(17,17,17,0.88);
+    z-index: 0;
+  }
+
+  #story > * {
+    position: relative;
+    z-index: 1;
   }
 
   .story-grid {
@@ -1206,7 +1220,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="plank-logo-dark.png" alt="Plank Structural Systems" style="height: 48px; width: auto; display: block;">
+    <img src="plank-logo-wordmark.svg" alt="Plank Structural Systems" style="height: 48px; width: auto; display: block;">
   </a>
   <ul class="nav-links">
     <li><a href="#product">The System</a></li>
@@ -1259,7 +1273,7 @@
 <!-- PRODUCT -->
 <section id="product">
   <div class="section-label">The System</div>
-  <h2 class="section-title" style="color: var(--charcoal);">Built like a<br><em>structural surfboard.</em></h2>
+  <h2 class="section-title" style="color: var(--charcoal);">No concrete.<br>No delays. <em>No compromises.</em></h2>
 
   <div class="product-intro-grid">
     <div class="product-copy">
@@ -1275,53 +1289,7 @@
     </div>
 
     <div class="layers-diagram">
-      <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(0,0,0,0.3); margin-bottom: 28px;">System layers — exploded view</div>
       <img src="plank-exploded.png" alt="Plank foundation system — exploded layer view" style="width: 100%; display: block; border-radius: 2px;">
-
-      <div style="display: flex; flex-direction: column; gap: 0; margin-top: 32px; border-top: 1px solid rgba(0,0,0,0.08);">
-        <div class="layer-row">
-          <div class="layer-num">01</div>
-          <div class="layer-info">
-            <div class="layer-name">Subfloor</div>
-            <div class="layer-desc">Integrated structural deck, ready for finish</div>
-          </div>
-        </div>
-        <div class="layer-row">
-          <div class="layer-num">02</div>
-          <div class="layer-info">
-            <div class="layer-name">Insulation</div>
-            <div class="layer-desc">R-36 thermal performance, factory-installed</div>
-          </div>
-        </div>
-        <div class="layer-row">
-          <div class="layer-num">03</div>
-          <div class="layer-info">
-            <div class="layer-name">Structure</div>
-            <div class="layer-desc">Torsion box — the load-bearing core</div>
-          </div>
-        </div>
-        <div class="layer-row">
-          <div class="layer-num">04</div>
-          <div class="layer-info">
-            <div class="layer-name">GSM sheet</div>
-            <div class="layer-desc">Galvanized steel, full perimeter protection</div>
-          </div>
-        </div>
-        <div class="layer-row">
-          <div class="layer-num">05</div>
-          <div class="layer-info">
-            <div class="layer-name">Waterproofing</div>
-            <div class="layer-desc">Mold, pest, and moisture barrier</div>
-          </div>
-        </div>
-        <div class="layer-row">
-          <div class="layer-num">06</div>
-          <div class="layer-info">
-            <div class="layer-name">Helical piers</div>
-            <div class="layer-desc">Multiple support options — no excavation required</div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -1352,7 +1320,7 @@
 <!-- PROBLEM -->
 <section id="problem">
   <div class="section-label">The Problem</div>
-  <h2 class="section-title">Slab-on-grade<br>is <em>broken.</em></h2>
+  <h2 class="section-title">The last bottleneck<br>in <em>construction.</em></h2>
 
   <div class="problem-grid">
     <div>
@@ -1474,8 +1442,8 @@
 <!-- TIMELINE -->
 <section id="timeline-section">
   <div class="section-label">Installation timeline</div>
-  <h2 class="section-title">12 days saved.<br><em>384 hours</em> returned.</h2>
-  <div style="font-size: 14px; color: rgba(255,255,255,0.4); margin-top: 8px; margin-bottom: 60px;">2,300 sqft slab · 11 Plank modules · 4-person crew</div>
+  <h2 class="section-title" style="color: var(--charcoal);">12 days saved.<br><em>384 hours</em> returned.</h2>
+  <div style="font-size: 14px; color: rgba(0,0,0,0.4); margin-top: 8px; margin-bottom: 60px;">2,300 sqft slab · 11 Plank modules · 4-person crew</div>
 
   <!-- SOG -->
   <div class="timeline-row-label">Slab-on-grade</div>
@@ -1549,7 +1517,7 @@
 
   <div class="proof-grid">
     <div class="proof-card">
-      <img src="plank-detail.png" alt="Plank foundation detail — steel connection and subfloor" style="width: calc(100% + 80px); margin: -40px -40px 28px -40px; display: block; height: 220px; object-fit: cover; object-position: center;">
+      <img src="plank-peerlab.png" alt="UC Berkeley PEER Lab compression testing" style="width: calc(100% + 80px); margin: -40px -40px 28px -40px; display: block; height: 220px; object-fit: cover; object-position: center top;">
       <div class="proof-card-label">Independent Testing · 2022</div>
       <div class="proof-card-title">UC Berkeley PEER Lab</div>
       <div class="proof-card-body">
@@ -1576,10 +1544,11 @@
     </div>
 
     <div class="proof-card">
+      <img src="plank-demohut.png" alt="The Demo Hut at UC Davis" style="width: calc(100% + 80px); margin: -40px -40px 28px -40px; display: block; height: 240px; object-fit: cover; object-position: center top;">
       <div class="proof-card-label">Pilot Project · May 2024</div>
       <div class="proof-card-title">The Demo Hut at UC Davis</div>
       <div class="proof-card-body">
-        Plank's first full-scale proof-of-concept: a complete structure built in collaboration with UC Davis, completed May 2024. The foundation was installed in hours. The building demonstrates energy efficiency, climate resilience, rapid installation, and low-carbon construction in practice — not just theory.
+        A 400 sq ft demonstration structure built in collaboration with UC Davis, Redhorse Constructors, and a coalition of builders, designers, and educators. Located at Orchard Park Drive, Davis, CA — it showcases 17 innovative building systems and technologies, with the Plank foundation installed in hours. Open for tours.
       </div>
       <div style="margin-top: 28px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08);">
         <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 12px;">Building qualities</div>
@@ -1589,9 +1558,10 @@
           <span class="proof-logo-pill">Low carbon</span>
           <span class="proof-logo-pill">Insurable</span>
           <span class="proof-logo-pill">Rapid install</span>
+          <span class="proof-logo-pill">17 innovative systems</span>
         </div>
       </div>
-      <div style="margin-top: 16px;">
+      <div style="margin-top: 20px;">
         <a href="https://www.thedemohut.org" target="_blank" style="font-size: 13px; font-weight: 600; color: var(--orange); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase;">Visit thedemohut.org →</a>
       </div>
     </div>
@@ -1622,7 +1592,7 @@
 <!-- STORY -->
 <section id="story">
   <div class="section-label">Our Story</div>
-  <h2 class="section-title">Why couldn't foundations<br>work like a <em>surfboard?</em></h2>
+  <h2 class="section-title">Built like a<br><em>structural surfboard.</em></h2>
 
   <div class="story-grid">
     <div>

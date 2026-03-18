@@ -219,10 +219,10 @@
   .hero-right img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
-    opacity: 0.9;
-    padding: 40px;
+    opacity: 0.55;
+    filter: contrast(1.1);
   }
 
   .hero-right::after {
@@ -401,14 +401,29 @@
   #product {
     background: #FFFFFF;
     padding: 100px 80px;
+    position: relative;
+    overflow: hidden;
   }
 
+  #product::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url('plank-exploded.png') center center / contain no-repeat;
+    opacity: 0.13;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #product > * { position: relative; z-index: 1; }
+
   .product-intro-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    display: block;
     margin-top: 60px;
-    align-items: stretch;
+    max-width: 55%;
   }
 
   .product-copy {
@@ -424,11 +439,7 @@
 
   .product-copy p + p { margin-top: 20px; }
 
-  /* layers diagram */
-  .layers-diagram {
-    background: #ffffff url('plank-exploded.png') center center / contain no-repeat;
-    min-height: 700px;
-  }
+  .layers-diagram { display: none; }
 
   .layer-row {
     display: flex;
@@ -1035,7 +1046,7 @@
 
   /* ── CONTACT ── */
   #contact {
-    background: var(--charcoal) url('plank-house.png') right bottom / 45% no-repeat;
+    background: var(--charcoal);
     padding: 100px 80px;
     position: relative;
     overflow: hidden;
@@ -1045,7 +1056,6 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(28,28,28,0.75);
     pointer-events: none;
   }
 
